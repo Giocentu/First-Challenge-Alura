@@ -1,0 +1,29 @@
+<canvas width="600" height="450"></canvas>
+<script>
+
+    function drawRect(x,y,color){
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        pincel.fillStyle= color;
+        pincel.fillRect(x,y,50,50);
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(x,y,50,50);
+        pincel.fill();
+    }
+
+     
+    var x = 0;
+        while(x < 600){
+            drawRect(x,0,"red");
+            drawRect(x,50,"yellow");
+            drawRect(x,100,"green");
+
+            x = x + 50;
+        }
+
+    
+   
+    
+   
+</script>
